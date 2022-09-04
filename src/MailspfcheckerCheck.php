@@ -2,13 +2,14 @@
 
 namespace Lloricode\MailspfcheckerHealthCheck;
 
+use Dietercoopman\Mailspfchecker\Mailspfchecker;
 use Spatie\Health\Checks\Check;
 use Spatie\Health\Checks\Result;
-use Dietercoopman\Mailspfchecker\Mailspfchecker;
 
 class MailspfcheckerCheck extends Check
 {
     private ?string $userServer = null;
+
     private ?string $emailOrDomain = 'info@dietse.dev';
 
     public function run(): Result
@@ -30,7 +31,7 @@ class MailspfcheckerCheck extends Check
 
         $ok = $checker->canISendAs($this->emailOrDomain);
 
-        if (!$ok) {
+        if (! $ok) {
             $checker->howCanISendAs($this->emailOrDomain);
         }
 
@@ -43,5 +44,4 @@ class MailspfcheckerCheck extends Check
 
         return $this;
     }
-
 }
