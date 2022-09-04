@@ -6,7 +6,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/lloricode/mailspfchecker-health-check/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/lloricode/mailspfchecker-health-check/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/lloricode/mailspfchecker-health-check.svg?style=flat-square)](https://packagist.org/packages/lloricode/mailspfchecker-health-check)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This package contains a [Laravel Health](https://spatie.be/docs/laravel-health) check if your application can send e-mail in name of a given address.
 
 ## Installation
 
