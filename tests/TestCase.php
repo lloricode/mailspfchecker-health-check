@@ -3,8 +3,8 @@
 namespace Lloricode\MailspfcheckerHealthCheck\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Lloricode\MailspfcheckerHealthCheck\MailspfcheckerHealthCheckServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

@@ -2,9 +2,9 @@
 
 namespace Lloricode\MailspfcheckerHealthCheck;
 
+use Lloricode\MailspfcheckerHealthCheck\Commands\MailspfcheckerHealthCheckCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Lloricode\MailspfcheckerHealthCheck\Commands\MailspfcheckerHealthCheckCommand;
 
 class MailspfcheckerHealthCheckServiceProvider extends PackageServiceProvider
 {
