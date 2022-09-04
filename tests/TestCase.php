@@ -3,7 +3,6 @@
 namespace Lloricode\MailspfcheckerHealthCheck\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Lloricode\MailspfcheckerHealthCheck\MailspfcheckerHealthCheckServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -12,15 +11,11 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Lloricode\\MailspfcheckerHealthCheck\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            MailspfcheckerHealthCheckServiceProvider::class,
         ];
     }
 
