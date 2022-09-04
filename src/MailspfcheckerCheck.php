@@ -5,6 +5,7 @@ namespace Lloricode\MailspfcheckerHealthCheck;
 use Dietercoopman\Mailspfchecker\Mailspfchecker;
 use Spatie\Health\Checks\Check;
 use Spatie\Health\Checks\Result;
+use Error;
 
 class MailspfcheckerCheck extends Check
 {
@@ -16,9 +17,15 @@ class MailspfcheckerCheck extends Check
     {
         $result = Result::make();
 
-        return $this->checker()
+        try {
+            $ok = $this->checker();
+        } catch(Error $e) {
+            return $result->failed('Error: '.$e->getMessage());
+        }
+
+        return $ok
             ? $result->ok()
-            : $result->failed('Failed');
+            : $result->failed('Failed!');
     }
 
     public function checker(): bool
@@ -31,7 +38,7 @@ class MailspfcheckerCheck extends Check
 
         $ok = $checker->canISendAs($this->emailOrDomain);
 
-        if (! $ok) {
+        if ( ! $ok) {
             $checker->howCanISendAs($this->emailOrDomain);
         }
 

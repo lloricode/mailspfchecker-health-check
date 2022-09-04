@@ -26,6 +26,13 @@ use Lloricode\MailspfcheckerHealthCheck\MailspfcheckerCheck;
 
 Health::checks([
     MailspfcheckerCheck::new(),
+    
+    MailspfcheckerCheck::new()
+        ->setEmailOrDomain('info@dietse.dev'),
+        
+    MailspfcheckerCheck::new()
+        ->setEmailOrDomain('info@dietse.dev')
+        ->setUserServer('smtp.mandrill.com'),
 ]);
 ```
 
