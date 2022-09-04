@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Lloricode\MailspfcheckerHealthCheck\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class MailspfcheckerHealthCheckCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'mailspfchecker-health-check';
 
     public $description = 'My command';
 
