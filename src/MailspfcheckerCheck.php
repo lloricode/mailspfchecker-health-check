@@ -9,7 +9,7 @@ use Dietercoopman\Mailspfchecker\Mailspfchecker;
 class MailspfcheckerCheck extends Check
 {
     private ?string $userServer = null;
-    private ?string $emailOrDomain = 'info@dietse.dev';
+    private string $emailOrDomain = 'info@dietse.dev';
 
     public function run(): Result
     {
@@ -41,6 +41,13 @@ class MailspfcheckerCheck extends Check
     {
         $this->userServer = $userServer;
 
+        return $this;
+    }
+
+
+    public function setEmailOrDomain(string $emailOrDomain): self
+    {
+        $this->emailOrDomain = $emailOrDomain;
         return $this;
     }
 
