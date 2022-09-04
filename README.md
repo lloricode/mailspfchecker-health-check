@@ -16,37 +16,17 @@ You can install the package via composer:
 composer require lloricode/mailspfchecker-health-check
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="mailspfchecker-health-check-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="mailspfchecker-health-check-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="mailspfchecker-health-check-views"
-```
-
 ## Usage
 
 ```php
-$mailspfcheckerHealthCheck = new Lloricode\MailspfcheckerHealthCheck();
-echo $mailspfcheckerHealthCheck->echoPhrase('Hello, Lloricode!');
+// typically, in a service provider
+
+use Spatie\Health\Facades\Health;
+use Lloricode\MailspfcheckerHealthCheck\MailspfcheckerCheck;
+
+Health::checks([
+    MailspfcheckerCheck::new(),
+]);
 ```
 
 ## Testing
