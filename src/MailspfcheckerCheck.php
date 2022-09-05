@@ -23,12 +23,12 @@ class MailspfcheckerCheck extends Check
             return $result->failed('Error: '.$e->getMessage());
         }
 
-        return $ok
+        return $ok === true
             ? $result->ok()
-            : $result->failed('Failed!');
+            : $result->failed('Failed: '.$ok);
     }
 
-    public function checker(): bool
+    public function checker(): bool|string
     {
         $checker = app(Mailspfchecker::class);
 
@@ -36,13 +36,11 @@ class MailspfcheckerCheck extends Check
             $checker->using($this->userServer);
         }
 
-        $ok = $checker->canISendAs($this->emailOrDomain);
-
-        if ( ! $ok) {
-            $checker->howCanISendAs($this->emailOrDomain);
+        if ($checker->canISendAs($this->emailOrDomain)) {
+            return true;
         }
 
-        return $ok;
+        return $checker->howCanISendAs($this->emailOrDomain);
     }
 
     public function setUserServer(string $userServer): self
