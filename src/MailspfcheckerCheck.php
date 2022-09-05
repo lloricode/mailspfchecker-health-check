@@ -11,7 +11,7 @@ class MailspfcheckerCheck extends Check
 {
     private ?string $userServer = null;
 
-    private string $emailOrDomain = 'info@dietse.dev';
+    private string $emailOrDomain = 'hello@example.com';
 
     public function run(): Result
     {

@@ -29,10 +29,10 @@ Health::checks([
     MailspfcheckerCheck::new(),
     
     MailspfcheckerCheck::new()
-        ->setEmailOrDomain('info@dietse.dev'),
+        ->setEmailOrDomain('hello@example.com'),
         
     MailspfcheckerCheck::new()
-        ->setEmailOrDomain('info@dietse.dev')
+        ->setEmailOrDomain('hello@example.com')
         ->setUserServer('smtp.mandrill.com'),
 ]);
 ```
