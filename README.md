@@ -7,6 +7,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/lloricode/mailspfchecker-health-check.svg?style=flat-square)](https://packagist.org/packages/lloricode/mailspfchecker-health-check)
 
 This package contains a [Laravel Health](https://spatie.be/docs/laravel-health) check if your application can send e-mail in name of a given address.
+Under the hood, it uses [Mail spf checker](https://github.com/dietercoopman/mailspfchecker).
 
 ## Installation
 
