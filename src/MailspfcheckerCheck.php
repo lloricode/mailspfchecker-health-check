@@ -28,7 +28,7 @@ class MailspfcheckerCheck extends Check
             : $result->failed('Failed: '.$ok);
     }
 
-    public function checker(): bool|string
+    private function checker(): bool|string
     {
         $checker = app(Mailspfchecker::class);
 
