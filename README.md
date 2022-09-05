@@ -1,5 +1,5 @@
 
-# mailspfchecker-health-check
+# Mail SPF Health Checker 
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/lloricode/mailspfchecker-health-check.svg?style=flat-square)](https://packagist.org/packages/lloricode/mailspfchecker-health-check)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/lloricode/mailspfchecker-health-check/run-tests?label=tests)](https://github.com/lloricode/mailspfchecker-health-check/actions?query=workflow%3Arun-tests+branch%3Amain)

@@ -11,6 +11,8 @@ class MailspfcheckerCheck extends Check
 {
     private ?string $userServer = null;
 
+    protected ?string $label = 'Mail SPF';
+
     private string $emailOrDomain = 'hello@example.com';
 
     public function run(): Result
