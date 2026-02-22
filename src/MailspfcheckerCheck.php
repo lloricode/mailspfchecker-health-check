@@ -21,7 +21,7 @@ class MailspfcheckerCheck extends Check
 
         try {
             $ok = $this->checker();
-        } catch(Error $e) {
+        } catch (Error $e) {
             return $result->failed('Error: '.$e->getMessage());
         }
 
